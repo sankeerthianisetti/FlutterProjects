@@ -1,28 +1,35 @@
-import 'package:flutter/material.dart';
-
-
 void main() {
-  runApp(MyApp());
-}
+  //  Variables & Data Types
+  String name = 'Sankeerthi';
+  int age = 19;
+  double height = 5.8;
+  bool isStudent = true;
 
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Row Layout')),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment
-              .spaceEvenly, // Spaces children evenly in the row
-          children: <Widget>[
-            Container(color: Colors.red, width: 100, height: 100),
-            Container(color: Colors.green, width: 100, height: 100),
-            Container(color: Colors.blue, width: 100, height: 100),
-          ],
-        ),
-      ),
-    );
+  //  Print variables
+  print('Name: $name');
+  print('Age: $age');
+  print('Height: $height');
+  print('Is Teacher: $isStudent');
+
+
+  // List (Array)
+  List<String> subjects = ['Dart', 'Flutter', 'AI', 'Python'];
+
+
+  //  Loop through the list
+  print('\nSubjects Known:');
+  for (String subject in subjects) {
+    print('- $subject');
   }
+
+
+  //  Function call
+  greetUser(name);
 }
 
+
+//  Function definition
+void greetUser(String userName) {
+  print('\nWelcome, $userName! Enjoy learning Dart.');
+}

@@ -1,16 +1,16 @@
 void main() {
   //  Variables & Data Types
-  String name = 'Sankeerthi';
-  int age = 19;
+  String name = 'Mohan';
+  int age = 23;
   double height = 5.8;
-  bool isStudent = true;
+  bool isTeacher = true;
 
 
   //  Print variables
   print('Name: $name');
   print('Age: $age');
   print('Height: $height');
-  print('Is Teacher: $isStudent');
+  print('Is Teacher: $isTeacher');
 
 
   // List (Array)
@@ -33,3 +33,4 @@ void main() {
 void greetUser(String userName) {
   print('\nWelcome, $userName! Enjoy learning Dart.');
 }
+

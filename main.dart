@@ -1,35 +1,33 @@
-void main() {
-  //  Variables & Data Types
-  String name = 'Sankeerthi';
-  int age = 19;
-  double height = 5.8;
-  bool isStudent = true;
+import 'package:flutter/material.dart';
 
 
-  //  Print variables
-  print('Name: $name');
-  print('Age: $age');
-  print('Height: $height');
-  print('Is Teacher: $isStudent');
+void main() => runApp(MyApp());
 
 
-  // List (Array)
-  List<String> subjects = ['Dart', 'Flutter', 'AI', 'Python'];
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
 
-  //  Loop through the list
-  print('\nSubjects Known:');
-  for (String subject in subjects) {
-    print('- $subject');
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          children: [
+            Text('Hello Flutter!'),
+            Image.network(
+              'https://flutter.dev/images/flutter-logo-sharing.png',
+              height: 80,
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              color: Colors.amber,
+              child: Text('Inside Container'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
-
-
-  //  Function call
-  greetUser(name);
 }
 
-
-//  Function definition
-void greetUser(String userName) {
-  print('\nWelcome, $userName! Enjoy learning Dart.');
-}

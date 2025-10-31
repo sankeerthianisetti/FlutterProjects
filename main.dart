@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
 
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [
-            Text('Hello Flutter!'),
-            Image.network(
-              'https://flutter.dev/images/flutter-logo-sharing.png',
-              height: 80,
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              color: Colors.amber,
-              child: Text('Inside Container'),
-            ),
+        appBar: AppBar(title: Text('Row Layout')),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment
+              .spaceEvenly, // Spaces children evenly in the row
+          children: <Widget>[
+            Container(color: Colors.red, width: 100, height: 100),
+            Container(color: Colors.green, width: 100, height: 100),
+            Container(color: Colors.blue, width: 100, height: 100),
           ],
         ),
       ),
